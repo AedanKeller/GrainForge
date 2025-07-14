@@ -1,0 +1,250 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section with strong pitch and CTA above the fold -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <h1>Authentic Sourdough, Zero Microplastics</h1>
+                    <p class="lead mb-4">Pure sourdough culture delivered without plastic contamination. Every starter arrives in completely plastic-free packaging, protecting your family from harmful microplastics while honoring traditional fermentation.</p>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Zero Microplastic Contamination</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Completely Plastic-Free Packaging</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Pure Living Culture</span>
+                        </div>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="{{ url_for('checkout') }}" class="btn btn-primary btn-lg me-3">
+                            Shop Starter Kit
+                        </a>
+                        <a href="#about" class="btn btn-outline-secondary btn-lg">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-image">
+                    <img src="https://pixabay.com/get/g9a695179e2e6715fc2573490393668890815ef972a846889be726ad7a6eb2f1424eca13ae81957aa47874d9057f54e302f4d42e03a5dd95f02258f98bb69cd2c_1280.jpg" 
+                         alt="Sourdough starter in wooden bowl" class="img-fluid rounded-3 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Video Section -->
+<section id="video" class="video-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto text-center">
+                <h2 class="section-title">Pure Fermentation, Protected Culture</h2>
+                <p class="lead mb-5">Experience the difference when your sourdough starter arrives completely free from plastic contamination, preserving the integrity of every living microorganism.</p>
+                
+                <div class="video-container">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                title="Sourdough Starter Craftsmanship" 
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <div class="video-caption mt-4">
+                    <p class="text-muted">Handcrafted traditions meet sustainable practices</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Gallery Section -->
+<section id="gallery" class="gallery-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Crafted with Intention</h2>
+                <p class="lead">Where tradition meets innovation in every carefully cultivated culture</p>
+            </div>
+        </div>
+        
+        <!-- Gallery Grid -->
+        <div class="row g-4">
+            <!-- Sourdough Starters -->
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-item">
+                    <img src="https://pixabay.com/get/gfece0875597a838fd4e0a781b280602ae119466a3b7e9a8382d736d1f726458358620932e5d7b5f33b7ea1a2af14b2f3297e321b81660d25cf11952985c6217a_1280.jpg" 
+                         alt="Active sourdough starter" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Living Culture</h5>
+                        <p>Our starters are alive and bubbling with beneficial microorganisms</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-item">
+                    <img src="https://pixabay.com/get/g0ba096ad986a042546df3a7dba9f9f2ae2947bde47219b32e68b4355924de8594c4e2c0b94b325041943f105c38ca58f0d20965965ff0642093b9ffc6ff52824_1280.jpg" 
+                         alt="Flour dusted hands kneading" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Artisan Craft</h5>
+                        <p>The tactile joy of working with living dough</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-item">
+                    <img src="https://pixabay.com/get/ge1f0f257b9b97ec2a745114707314ab5c1076392a416f12e7e3db9081114d5f914288a1d38506388cf6f50dd39daffbb1551ef97e9fd81c8b034ee35c6d0d558_1280.jpg" 
+                         alt="Crusty artisan bread" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Perfect Results</h5>
+                        <p>Achieve bakery-quality bread in your own kitchen</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-item">
+                    <img src="https://pixabay.com/get/ga7b1eece495dcdd9aa7bc16bf2af104a2c61d8d74ec981afad5505f397ec5a4dde68a23bff8ac06ed15ec3bd3aefac508d309ff1d76e212a4eb01040aff14d84_1280.jpg" 
+                         alt="Autumn kitchen scene" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Cozy Kitchens</h5>
+                        <p>Create warmth and comfort in your homestead kitchen</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-item">
+                    <img src="https://pixabay.com/get/g1f8eaf02d6d84082c9443920b6c120453671f836bbf2e92bf9c652b0604d312392a283f0907f2d717c19849f441ce2ab37d247823f62c215cb6160527b6e93fa_1280.jpg" 
+                         alt="Sustainable homestead living" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Sustainable Living</h5>
+                        <p>Embrace eco-friendly practices that nourish both body and earth</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-item">
+                    <img src="https://pixabay.com/get/gfb7a4e4185c1cf568c2c51578f5373e76b2f9d541655c78f550b5a489d87e19676986973e8952f24b5f1dc287f5a91dfab21662f72b78ac722c882e905872f31_1280.jpg" 
+                         alt="Fresh baked bread loaves" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <h5>Daily Bread</h5>
+                        <p>Make fresh, healthy bread a daily tradition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Microplastics Education Section -->
+<section class="microplastics-section py-5" style="background: var(--neutral-light);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-title mb-4">The Hidden Danger in Your Food</h2>
+                <p class="lead mb-4">Microplastics from food packaging are infiltrating our bodies at alarming rates. Studies show that the average person consumes a credit card's worth of plastic weekly.</p>
+                
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <div class="danger-stat">
+                            <h3 class="text-primary">5g</h3>
+                            <p class="small">Average weekly plastic consumption per person</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="danger-stat">
+                            <h3 class="text-primary">90%</h3>
+                            <p class="small">Of food products contain microplastic particles</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="danger-stat">
+                            <h3 class="text-primary">0</h3>
+                            <p class="small">Microplastics in our plastic-free starters</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="solution-box mt-5 p-4" style="background: white; border: 1px solid var(--neutral-medium);">
+                    <h4>Our Solution</h4>
+                    <p>Every Grain Smith starter is cultivated, stored, and shipped without any plastic contact. From glass fermentation vessels to biodegradable packaging, we've eliminated every source of microplastic contamination.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img src="https://pixabay.com/get/gc20d41506666763f32545e3c1862152e737627165635ee33621a6fe42e3d257411f237b786ebcb3d5dec5e0efd3c8e5bca6cc0010b3732480a2a7a710439a428_1280.jpg" 
+                     alt="Traditional sourdough making" class="img-fluid rounded-3">
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <h2 class="section-title text-start mb-4">Our Mission Against Microplastics</h2>
+                    <p class="lead">Every day, microplastics infiltrate our food supply through packaging. We're taking a stand.</p>
+                    <p>Research shows that plastic packaging releases microscopic particles into food, accumulating in our bodies over time. Our sourdough starters arrive in carefully selected, completely plastic-free materials—protecting both your health and the purity of our living cultures.</p>
+                    
+                    <div class="row mt-5">
+                        <div class="col-12">
+                            <div class="feature-box">
+                                <i class="fas fa-microscope"></i>
+                                <h6>Microplastic-Free Promise</h6>
+                                <p class="small">Zero plastic contact with your starter culture from cultivation to delivery</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="feature-box">
+                                <i class="fas fa-shield-alt"></i>
+                                <h6>Health Protection</h6>
+                                <p class="small">Safeguarding your family from harmful plastic contamination in food</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="feature-box">
+                                <i class="fas fa-earth-americas"></i>
+                                <h6>Environmental Leadership</h6>
+                                <p class="small">Proving that premium food products can thrive without plastic dependency</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="{{ url_for('checkout') }}" class="btn btn-primary mt-4">Begin Your Practice</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">Choose Pure, Choose Plastic-Free</h2>
+                <p class="lead mb-4">Join the movement toward microplastic-free food with our pristine sourdough culture</p>
+                <a href="{{ url_for('checkout') }}" class="btn btn-primary btn-lg">
+                    Order Plastic-Free Starter
+                </a>
+                <p class="mt-4 text-muted">Plastic-free shipping • Purity guaranteed</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

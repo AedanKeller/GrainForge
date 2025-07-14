@@ -1,0 +1,564 @@
+/* The Grain Smith - Premium Sourdough Website */
+
+/* Refined Color Palette for Professional Look */
+:root {
+    --primary-dark: #8D6E63;      /* Changed to lighter brown */
+    --primary-medium: #A1887F;    /* Changed to even lighter brown */
+    --warm-white: #FEFBF7;
+    --accent-warm: #B8860B;
+    --accent-muted: #8D6E63;
+    --neutral-light: #F5F2ED;
+    --neutral-medium: #E8E3DB;
+    --text-primary: #2C1810;
+    --text-secondary: #6D5043;
+    --text-muted: #9E8B7F;
+}
+
+/* Premium Typography */
+body {
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-primary);
+    background-color: var(--warm-white);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.lead {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Premium Header */
+.navbar {
+    background-color: rgba(254, 251, 247, 0.97);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--neutral-medium);
+    padding: 1rem 0;
+    transition: all 0.4s ease;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    color: var(--text-primary) !important;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+
+.logo-space {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-space i {
+    font-size: 1.5rem;
+    color: var(--accent-warm);
+}
+
+.brand-name {
+    color: var(--text-primary);
+    font-weight: 400;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Crimson Text', serif;
+    font-size: 0.9rem;
+    color: var(--text-secondary) !important;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 0;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--text-primary) !important;
+}
+
+.navbar-nav .nav-link.btn {
+    margin-left: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.navbar-nav .nav-link.btn:hover {
+    color: white !important;
+}
+
+/* Premium Button Styles */
+.btn-primary {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: white;
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    padding: 0.875rem 2rem;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-medium);
+    border-color: var(--primary-medium);
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-outline-secondary {
+    border-color: var(--neutral-medium);
+    color: var(--text-secondary);
+    font-family: 'Crimson Text', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    border-width: 1px;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--neutral-light);
+    border-color: var(--neutral-medium);
+    color: var(--text-primary);
+}
+
+/* Premium Hero Section */
+.hero-section {
+    background: var(--warm-white);
+    padding-top: 80px;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content h1 {
+    color: var(--text-primary);
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+.hero-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.feature-item i {
+    font-size: 1rem;
+    width: 16px;
+    color: var(--accent-warm);
+}
+
+.hero-cta {
+    margin-top: 3rem;
+}
+
+.hero-image img {
+    border-radius: 0;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    transition: none;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.hero-image img:hover {
+    transform: none;
+}
+
+/* Premium Section Styling */
+.section-title {
+    font-size: 2.25rem;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+.video-section {
+    background-color: var(--neutral-light);
+    padding: 6rem 0;
+}
+
+.video-container {
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.12);
+}
+
+/* Premium Gallery Section */
+.gallery-section {
+    background: var(--warm-white);
+    padding: 6rem 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    transition: none;
+    height: 400px;
+    margin-bottom: 2rem;
+}
+
+.gallery-item:hover {
+    transform: none;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: none;
+    filter: brightness(0.95);
+}
+
+.gallery-item:hover img {
+    transform: none;
+    filter: brightness(1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(44,24,16,0.85));
+    color: white;
+    padding: 3rem 2rem 2rem;
+    transform: translateY(0);
+    transition: none;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay h5 {
+    color: white;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.gallery-overlay p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* Microplastics Education Section */
+.microplastics-section {
+    padding: 6rem 0;
+}
+
+.danger-stat {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.danger-stat h3 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+}
+
+.danger-stat p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.solution-box {
+    border-radius: 0;
+    text-align: left;
+}
+
+.solution-box h4 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.solution-box p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Premium About Section */
+.about-section {
+    background-color: var(--warm-white);
+    padding: 6rem 0;
+}
+
+.feature-box {
+    text-align: left;
+    padding: 1.5rem 0;
+}
+
+.feature-box i {
+    font-size: 1.5rem;
+    display: block;
+    color: var(--accent-warm);
+    margin-bottom: 1rem;
+}
+
+.feature-box h6 {
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Premium Call to Action Section */
+.cta-section {
+    background: var(--text-primary);
+    color: white;
+    padding: 6rem 0;
+}
+
+.cta-section h2 {
+    color: white;
+    font-weight: 400;
+}
+
+.cta-section .lead {
+    color: rgba(255,255,255,0.8);
+}
+
+.cta-section .btn-primary {
+    background-color: var(--accent-warm);
+    border-color: var(--accent-warm);
+    color: var(--text-primary);
+}
+
+.cta-section .btn-primary:hover {
+    background-color: rgba(184,134,11,0.9);
+    color: var(--text-primary);
+}
+
+/* Premium Checkout Page */
+.checkout-section {
+    min-height: 80vh;
+    background-color: var(--warm-white);
+    padding-top: 80px;
+}
+
+.order-summary {
+    background: var(--neutral-light);
+    border: 1px solid var(--neutral-medium);
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.checkout-section .card {
+    border: 1px solid var(--neutral-medium);
+    box-shadow: none;
+    border-radius: 0;
+    background: white;
+}
+
+.form-control, .form-select {
+    border: 1px solid var(--neutral-medium);
+    border-radius: 0;
+    padding: 0.875rem 1rem;
+    font-family: 'Crimson Text', serif;
+    transition: border-color 0.3s ease;
+    background-color: white;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-dark);
+    box-shadow: none;
+    background-color: white;
+}
+
+.form-label {
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.total-calculation {
+    background-color: var(--neutral-light);
+    padding: 1.5rem;
+    border-radius: 0;
+    text-align: center;
+    border: 1px solid var(--neutral-medium);
+}
+
+.trust-indicators {
+    color: var(--text-muted);
+    padding: 3rem 0;
+}
+
+.trust-indicators i {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+    color: var(--accent-warm);
+}
+
+/* Premium Footer */
+footer {
+    background-color: var(--neutral-light) !important;
+    color: var(--text-secondary);
+    padding: 4rem 0 2rem !important;
+}
+
+footer h5, footer h6 {
+    color: var(--text-primary);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+footer i {
+    color: var(--accent-warm);
+    margin-right: 0.5rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Premium Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.25rem;
+        line-height: 1.1;
+    }
+    
+    .hero-features {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .gallery-item {
+        height: 300px;
+        margin-bottom: 1rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    
+    .navbar {
+        padding: 1rem 0;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 0.85rem;
+        margin: 0 0.5rem;
+    }
+    
+    .hero-section {
+        padding-top: 70px;
+        min-height: auto;
+    }
+    
+    .checkout-section {
+        padding-top: 70px;
+    }
+    
+    .video-section, .gallery-section, .about-section, .cta-section {
+        padding: 4rem 0;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Refined Transitions */
+a, button, .btn {
+    transition: all 0.3s ease;
+}
+
+.navbar, .form-control, .form-select {
+    transition: all 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--warm-cream);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--light-brown);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--burnt-orange);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInUp 0.6s ease forwards;
+}

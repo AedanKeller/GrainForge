@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+
+{% block title %}Checkout - The Grain Smith{% endblock %}
+
+{% block content %}
+<section class="checkout-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="checkout-header text-center mb-5">
+                    <h1 class="mb-3">Sourdough Starter Kit</h1>
+                    <p class="lead">Begin your artisan bread making practice</p>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="card order-summary mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">
+                            Order Summary
+                        </h5>
+                        <div class="row align-items-center">
+                            <div class="col-md-3">
+                                <img src="https://pixabay.com/get/g9a695179e2e6715fc2573490393668890815ef972a846889be726ad7a6eb2f1424eca13ae81957aa47874d9057f54e302f4d42e03a5dd95f02258f98bb69cd2c_1280.jpg" 
+                                     alt="Sourdough Starter Kit" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Microplastic-Free Sourdough Starter Kit</h6>
+                                <p class="text-muted mb-0">Pure living culture with zero plastic contamination</p>
+                                <small class="text-success">
+                                    <i class="fas fa-shield-alt"></i> Microplastic-free guarantee
+                                    <i class="fas fa-leaf ms-2"></i> Plastic-free shipping
+                                </small>
+                            </div>
+                            <div class="col-md-3 text-end">
+                                <h5 class="text-primary mb-0">$29.99</h5>
+                                <small class="text-muted">per kit</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checkout Form -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">
+                            Shipping Information
+                        </h5>
+                        
+                        <form method="POST">
+                            {{ form.hidden_tag() }}
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    {{ form.name.label(class="form-label") }}
+                                    {{ form.name(class="form-control" + (" is-invalid" if form.name.errors else "")) }}
+                                    {% if form.name.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.name.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.email.label(class="form-label") }}
+                                    {{ form.email(class="form-control" + (" is-invalid" if form.email.errors else "")) }}
+                                    {% if form.email.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.email.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                {{ form.phone.label(class="form-label") }}
+                                {{ form.phone(class="form-control", placeholder="(555) 123-4567") }}
+                                <div class="form-text">Optional - for delivery updates</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                {{ form.address.label(class="form-label") }}
+                                {{ form.address(class="form-control" + (" is-invalid" if form.address.errors else ""), rows="2") }}
+                                {% if form.address.errors %}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.address.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    {{ form.city.label(class="form-label") }}
+                                    {{ form.city(class="form-control" + (" is-invalid" if form.city.errors else "")) }}
+                                    {% if form.city.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.city.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                <div class="col-md-3">
+                                    {{ form.state.label(class="form-label") }}
+                                    {{ form.state(class="form-select" + (" is-invalid" if form.state.errors else "")) }}
+                                    {% if form.state.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.state.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                <div class="col-md-3">
+                                    {{ form.zip_code.label(class="form-label") }}
+                                    {{ form.zip_code(class="form-control" + (" is-invalid" if form.zip_code.errors else "")) }}
+                                    {% if form.zip_code.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.zip_code.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    {{ form.quantity.label(class="form-label") }}
+                                    {{ form.quantity(class="form-control" + (" is-invalid" if form.quantity.errors else ""), value="1", min="1", max="10") }}
+                                    {% if form.quantity.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.quantity.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                <div class="col-md-8 d-flex align-items-end">
+                                    <div class="total-calculation">
+                                        <span class="text-muted">Total: </span>
+                                        <span id="total-amount" class="h5 text-primary">$29.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <hr class="my-4">
+                            
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-between">
+                                <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">
+                                    Continue Shopping
+                                </a>
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    Place Order
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="trust-indicators mt-4 text-center">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <i class="fas fa-shield-alt text-success"></i>
+                            <small class="d-block">Secure Checkout</small>
+                        </div>
+                        <div class="col-md-4">
+                            <i class="fas fa-truck text-primary"></i>
+                            <small class="d-block">Free Shipping</small>
+                        </div>
+                        <div class="col-md-4">
+                            <i class="fas fa-undo text-warning"></i>
+                            <small class="d-block">30-Day Guarantee</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
